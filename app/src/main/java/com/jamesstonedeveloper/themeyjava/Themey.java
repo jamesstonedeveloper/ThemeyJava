@@ -29,7 +29,7 @@ public class Themey {
     private ImageView newThemeImageView;
     private ImageView oldThemeImageView;
     private ViewGroup themeLayout;
-    private Integer circleAnimation;
+    private Integer circleAnimation = NONE;
     private boolean shouldKeepTheme;
     private int centerX = 0;
     private int centerY = 0;
@@ -150,7 +150,7 @@ public class Themey {
 
     public void changeTheme(int theme) {
         if (!isAnimating) {
-            changeTheme(theme, theme == AppCompatDelegate.MODE_NIGHT_YES ? OUTWARD : CircleAnimation.INWARD);
+            changeTheme(theme, circleAnimation);
         }
     }
 
@@ -162,7 +162,7 @@ public class Themey {
 
     public void changeTheme(int theme, int centerX, int centerY) {
         if (!isAnimating) {
-            changeTheme(theme, theme == AppCompatDelegate.MODE_NIGHT_YES ? OUTWARD : CircleAnimation.INWARD, centerX, centerY);
+            changeTheme(theme, circleAnimation, centerX, centerY);
         }
     }
 
@@ -334,6 +334,7 @@ public class Themey {
         newThemeImageView = null;
         newThemeSnapshot = null;
         oldThemeSnapshot = null;
+        circleAnimation = NONE;
         centerY = 0;
         centerX = 0;
     }
