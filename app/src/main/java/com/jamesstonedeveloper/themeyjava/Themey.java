@@ -125,7 +125,10 @@ public class Themey {
         } else {
             if (shouldKeepTheme) {
                 SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
-                AppCompatDelegate.setDefaultNightMode(sharedPreferences.getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
+                int keptTheme = sharedPreferences.getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                if (isDayNightTheme(keptTheme)) {
+                    AppCompatDelegate.setDefaultNightMode(sharedPreferences.getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
+                } 
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             }
