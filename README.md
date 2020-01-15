@@ -4,7 +4,7 @@ A simple library to easily switch between themes or day/night modes in your app.
 
 ## Gradle
 
-TODO
+[![](https://jitpack.io/v/jamesstonedeveloper/ThemeyJava.svg)](https://jitpack.io/#jamesstonedeveloper/ThemeyJava)
 
 Add jitpack to your project gradle file
 ``` 
@@ -21,7 +21,7 @@ Then in your app gradle file
 ```
 dependencies {
     ...
-    TODO
+    implementation 'com.github.jamesstonedeveloper:ThemeyJava:1.0.3'
 
 }
 ```
