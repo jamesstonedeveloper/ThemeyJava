@@ -34,7 +34,7 @@ dependencies {
 
 ## Set up
 
-# For just day/night changing
+### For just day/night changing
 
 In your activity's onCreate method, after setting the content view, initialise the Themey class by providing context, your activity's root layout and whether you want the app to remember theme changes or not (these are stored in shared preferences)
 ```java
@@ -47,7 +47,7 @@ In your activity's onCreate method, after setting the content view, initialise t
     }
 ```
 
-# For using cutom themes
+### For using cutom themes
 Note: you can interchangably switch between custom themes and day/night mode if set up this way
 
 In your activity's onCreate method, BEFORE setting the content view, you need to run a `delayedInit()` on the Themey class by providing context and a boolean for if you want the app to remember theme changes
