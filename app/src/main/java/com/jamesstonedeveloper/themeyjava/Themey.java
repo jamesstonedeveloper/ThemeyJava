@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import static com.jamesstonedeveloper.themeyjava.Themey.CircleAnimation.NONE;
-import static com.jamesstonedeveloper.themeyjava.Themey.CircleAnimation.OUTWARD;
 
 public class Themey {
 
@@ -127,8 +126,8 @@ public class Themey {
                 SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS_NAME, 0);
                 int keptTheme = sharedPreferences.getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
                 if (isDayNightTheme(keptTheme)) {
-                    AppCompatDelegate.setDefaultNightMode(sharedPreferences.getInt(THEME_KEY, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM));
-                } 
+                    AppCompatDelegate.setDefaultNightMode(keptTheme);
+                }
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             }
@@ -199,6 +198,7 @@ public class Themey {
                 return;
             }
             AppCompatDelegate.setDefaultNightMode(theme);
+            changeTheme(defaultTheme, circleAnimation, centerX, centerY);
         } else {
             if (context instanceof Activity) {
                 ((Activity) context).recreate();
