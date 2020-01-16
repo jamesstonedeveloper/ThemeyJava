@@ -139,7 +139,7 @@ public class Themey {
     }
 
     public void toggleDayNight(int circleAnimation) {
-        changeTheme(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES ? AppCompatDelegate.MODE_NIGHT_NO : AppCompatDelegate.MODE_NIGHT_YES, centerX, centerY, circleAnimation);
+        changeTheme(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES ? AppCompatDelegate.MODE_NIGHT_NO : AppCompatDelegate.MODE_NIGHT_YES, circleAnimation);
     }
 
     public void toggleDayNight(int circleAnimation, int centerX, int centerY) {
