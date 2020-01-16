@@ -21,7 +21,7 @@ Then in your app gradle file
 ```
 dependencies {
     ...
-    implementation 'com.github.jamesstonedeveloper:ThemeyJava:1.0.4'
+    implementation 'com.github.jamesstonedeveloper:ThemeyJava:1.0.5'
 
 }
 ```
