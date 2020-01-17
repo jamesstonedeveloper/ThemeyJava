@@ -8,6 +8,8 @@ A simple library to easily switch between themes or day/night modes in your app.
 
 [![](https://jitpack.io/v/jamesstonedeveloper/ThemeyJava.svg)](https://jitpack.io/#jamesstonedeveloper/ThemeyJava)
 
+[Click here for the demo app](https://github.com/jamesstonedeveloper/ThemeyJavaDemo "Themey java demo")
+
 Add jitpack to your project gradle file
 ``` 
 allprojects {
