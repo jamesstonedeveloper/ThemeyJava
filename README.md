@@ -35,6 +35,7 @@ dependencies {
 * API level 21
 * To prevent your screen going black as the themes change you'll need to add this to your activity's theme:
 `<item name="android:windowAnimationStyle">@style/ThemeyAnimationTransition</item>`
+* Single-activity app (untested on multiple-activity apps, unlikely to go well due to setting the windowAnimationStyle)
 
 ## Set up
 
